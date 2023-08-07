@@ -43,7 +43,7 @@ The request method is the way we distinguish what kind of action our endpoint is
 
 ### Clone the respository
 
-git clone
+git clone https://github.com/saikiran6694/node_assignment.git
 
 ### Install Node_Modules
 
