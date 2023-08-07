@@ -1,0 +1,81 @@
+### Anatomy of an endpoint
+
+The anatomy of an endpoint looks like this:
+
+```
+/api/register
+/api/token
+/api/data
+/api/data/:id
+```
+
+Below is a breakdown of the different pieces in the endpoint:
+
+1. All our API’s are prefixed with `/api/`.
+2. 'register' is the name used to register the user who is access this for the first time.
+3. 'token' next step where user is allowed to login into the application and get access to the token which further allows him to access the private routes
+4. 'data' is the first private route which is basically accessible by those who have the access token
+5. 'data/:id' which route provide permission to get the private imformation, manipulate it as well as delete it.
+
+### Request methods
+
+The request method is the way we distinguish what kind of action our endpoint is being "asked" to perform. For example, `GET` pretty much gives itself. But we also have a few other methods that we use quite often.
+
+| Method   | Description                                                              |
+| -------- | ------------------------------------------------------------------------ |
+| `GET`    | Used to retrieve a single item or a collection of items.                 |
+| `POST`   | Used when creating new items e.g. a new user, post, comment etc.         |
+| `PATCH`  | Used to update one or more fields on an item e.g. update e-mail of user. |
+| `PUT`    | Used to replace a whole item (all fields) with new data.                 |
+| `DELETE` | Used to delete an item.                                                  |
+
+### Request API used in this project
+
+| API EndPoints   | DESCRIPTIONS                                               |
+| --------------- | ---------------------------------------------------------- |
+| `/api/register` | Used to register the user into the appication              |
+| `/api/login`    | Used to login the user into the application and get        |
+|                 | to the access ACCESS_TOKEN                                 |
+| `/api/data`     | Private route only able to be accessed by the logined      |
+|                 | user and can upload the data of key and value              |
+| `/api/data/:id` | GET, DELETE and PUT methods are used to delete, update and |
+|                 | retrieve a particular data                                 |
+
+### Clone the respository
+
+git clone
+
+### Install Node_Modules
+
+npm i
+
+### Run the application
+
+npm run server
+
+The Application will be running on
+http://localhost:9000
+
+### ADD .env File to add environment variable
+
+MONGO_URL =
+ACCESS_TOKEN =
+PORT =
+
+Here, MONGO_URL is mongoDb database url, ACCESS_TOKEN is any random string of character
+PORT = (by default 9000)
+
+### WORKING:
+
+Once application is running on local device, move to endpoint
+
+`/api/register`: for new user registeration (POST)
+`/api/token`: for logging in and getting access to the ACCESS_TOKEN (POST)
+`/api/data` : for uploading data into users profile (POST)
+`/api/data/:id`: for deleting, manipulating and retireveing data (DELETE),(PUT),(GET)
+
+### WORKING VIDEO FOR REFERENCE
+
+<a href="https://www.hippovideo.io/video/play/is5eZlMPoEeRFuRDqeM9esKC0kYwLeBAgcDPgUpxfVw?hvlk=4LEXrgJpwkbR&org_tok=LLEguA5DrOI9ac0e6Z5pew&hvre=false&_=1691421822038&
+Watch Video
+" target="_blank">WORKING Video</a>
